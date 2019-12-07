@@ -259,8 +259,21 @@ end
 def winning_team
   game_table = game_hash
   
+  max_score= 0 
+  max_scoring_team = ""
+  
   game_table.map do |court_sides|
+    team_score = 0
     team_name = court_sides[1][:team_name]
     player_list = court_sides[1][:players]
+    
+    player_list.map do |player|
+      team_score += player[:stats][:points]
+    end
+    if(team_score > max_score)
+      max_score = team_score
+      max_scoring_team = team_name
+    end
   end
+  puts max_scoring_team
 end
