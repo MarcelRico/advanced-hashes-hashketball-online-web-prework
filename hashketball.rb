@@ -255,3 +255,7 @@ def most_points_scored
   end
   max_scoring_player
 end
+
+def winning_team
+  game_table = game_hash
+end
