@@ -303,7 +303,14 @@ def long_name_steals_a_ton?
   longest_name = player_with_longest_name
   longest_name_steals = player_stats(longest_name)[:steals]
   
-  pp longest_name
-  pp longest_name_steals
-  
+  game_table.map do |court_sides|
+    player_list = court_sides[1][:players]
+    
+    player_list.map do |player|
+      if(player[:player_name] != longest_name && player[:stats][:steals] > longest_name_steals)
+        return false
+      end
+    end
+  end
+  return true
 end
