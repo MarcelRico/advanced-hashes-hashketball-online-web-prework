@@ -295,5 +295,5 @@ def player_with_longest_name
       end
     end
   end
-  puts longest_player_name
+  longest_player_name
 end
