@@ -280,11 +280,12 @@ end
 
 def player_with_longest_name
   game_table = game_hash
+  max_length = 0
+  longest_player_name = ""
   
   game_table.map do |court_sides|
     player_list = court_sides[1][:players]
-    max_length = 0
-    longest_player_name = ""
+
     
     player_list.map do |player|
       player_name_length = player[:player_name].length
