@@ -253,5 +253,5 @@ def most_points_scored
       end
     end
   end
-  puts max_scoring_player
+  max_scoring_player
 end
