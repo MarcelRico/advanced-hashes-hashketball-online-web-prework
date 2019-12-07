@@ -275,5 +275,5 @@ def winning_team
       max_scoring_team = team_name
     end
   end
-  puts max_scoring_team
+  max_scoring_team
 end
