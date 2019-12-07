@@ -288,7 +288,10 @@ def player_with_longest_name
     
     player_list.map do |player|
       player_name_length = player[:player_name].length
-      player_name_length
+      if player_name_length > max_length
+        max_length = player_name_length
+        longest_player_name = player[:player_name]
     end
   end
+  puts longest_player_name
 end
