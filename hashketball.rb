@@ -242,9 +242,16 @@ end
 
 def most_points_scored
   game_table = game_hash
-  
+  max_score = 0
+  max_scoring_player = ""
   game_table.map do |court_sides|
-    court_sides[1][:players]  
+    court_sides[1][:players].map do |player|
+      players_score = player[:stats][:points]
+      if players_score > max_score
+        max_score = players_score
+        max_scoring_player = player[:player_name]
+      end
+    end
   end
-  
+  puts max_scoring_player
 end
