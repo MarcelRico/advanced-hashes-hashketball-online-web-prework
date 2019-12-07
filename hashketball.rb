@@ -299,5 +299,11 @@ def player_with_longest_name
 end
 
 def long_name_steals_a_ton?
+  game_table = game_hash
+  longest_name = player_with_longest_name
+  longest_name_steals = player_stats(longest_name)[:steals]
+  
+  pp longest_name
+  pp longest_name_steals
   
 end
