@@ -258,4 +258,9 @@ end
 
 def winning_team
   game_table = game_hash
+  
+  game_table.map do |court_sides|
+    team_name = court_sides[1][:team_name]
+    player_list = court_sides[1][:players]
+  end
 end
