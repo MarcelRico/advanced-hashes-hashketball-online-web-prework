@@ -239,3 +239,12 @@ def big_shoe_rebounds
   end
   biggest_rebounds
 end
+
+def most_points_scored
+  game_table = game_hash
+  
+  game_table.map do |court_sides|
+    court_sides[1][:players]  
+  end
+  
+end
